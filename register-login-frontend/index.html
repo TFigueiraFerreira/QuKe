@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<header>
+<body>
+
+<!-- Register Page -->
+<form id="register_page">
+    <label for="fname">First name:</label>
+    <br>
+    <input type="text" id="fname" name="fname">
+    <br>
+    <label for="lname">Last name:</label>
+    <br>
+    <input type="text" id="lname" name="lname">
+    <br>
+    <label for="email">Email:</label>
+    <br>
+    <input type="text" id="email" name="email">
+    <br>
+    <label for="password">Password:</label>
+    <br>
+    <input type="text" id="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById('register_page').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var formData = {
+        firstname: document.getElementById('fname').value,
+        lastname: document.getElementById('lname').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    };
+
+    fetch('http://localhost:8080/api/v1/auth/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else if (response.status === 409) {
+            throw new Error('Email já registrado');
+        } else {
+            throw new Error('Erro durante o registro');
+        }
+    })
+        
+
+    .then(data => {
+        alert("Registo bem-sucedido!");
+    
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+            alert('Este email já está registrado. Por favor, use um email diferente.');
+    });
+});
+</script>
+
+<!-- Login Page -->
+<form id="login_page">
+    <label for="email_login">Email:</label>
+    <br>
+    <input type="text" id="email_login" name="email_login">
+    <br>
+    <label for="password_login">Password:</label>
+    <br>
+    <input type="text" id="password_login" name="password_login">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById('login_page').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var formDataLogin = {
+        email: document.getElementById('email_login').value,
+        password: document.getElementById('password_login').value
+    };
+
+    fetch('http://localhost:8080/api/v1/auth/authenticate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formDataLogin)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Credenciais inválidas');
+        }
+    })
+    .then(data => {
+        alert("Login bem-sucedido! Token: " + data.token);
+    })
+    .catch(error => {
+        console.error('Erro:', error.message);
+        alert('Erro: ' + error.message);
+    });
+});
+</script>
+
+</body>
+</header>
+</html>

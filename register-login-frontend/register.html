@@ -18,6 +18,8 @@
         </form>
     </div>
 
+    <a href="login.html" id="login_page"></a>
+
     <script>
         document.getElementById('register_page').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -56,6 +58,7 @@
         
             .then(data => {
                 alert("Registo bem-sucedido!");
+                document.getElementById('login_page').click();
             
             })
             .catch(error => {

@@ -5,17 +5,66 @@
 </head>
 <body>
     <div class="register">
-        <form action="">
+        <form id="register_page">
             <div class="names_register">
                 <input class="fname" type="fname" id="fname" name="fname">
                 <input class="lname" type="lname" id="lname" name="lname">
             </div>
             <input class="email_register" type="email" id="email_register" name="email_register">
-            <input class="new_password_register" type="password" id="new_password_register" name="new_password_register">
-            <input class="repeat_password_register" type="password" id="repeat_password_register" name="repeat_password_register">
+            <input class="new_password_register" type="text" id="new_password_register" name="new_password_register">
+            <input class="repeat_password_register" type="text" id="repeat_password_register" name="repeat_password_register">
             <input class="submit_register" type="submit" id="submit_register" name="submit_register">
             <input class="google" type="submit" id="google" name="google" value="Sign Up With Google">
         </form>
     </div>
+
+    <script>
+        document.getElementById('register_page').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var formData = {
+                firstname: document.getElementById('fname').value,
+                lastname: document.getElementById('lname').value,
+                email: document.getElementById('email_register').value,
+                password: document.getElementById('new_password_register').value,
+                repeatpassword: document.getElementById('repeat_password_register').value
+                
+            };
+
+            if (formData.password !== formData.repeatpassword) {
+                alert("As senhas não são iguais");
+                return;
+            }
+        
+            fetch('http://localhost:8080/api/v1/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else if (response.status === 409) {
+                    throw new Error('Email já registrado');
+                } else {
+                    throw new Error('Erro durante o registro');
+                }
+            })
+                
+        
+            .then(data => {
+                alert("Registo bem-sucedido!");
+            
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                    alert('Este email já está registrado. Por favor, use um email diferente.');
+            });
+
+        });
+        </script>
+
 </body>
 </html>

@@ -5,12 +5,49 @@
 </head>
 <body>
     <div>
-        <form action="">
+        <form id="login_page">
             <input class="email_login" type="email" id="email_login" name="email_login">
-            <input class="password_login" type="password" id="password_login" name="password_login">
+            <input class="password_login" type="text" id="password_login" name="password_login">
             <input class="submit_login" type="submit" id="submit_login" name="submit_login" value="Login">
             <input class="google" type="submit" id="google" name="google" value="Sign In With Google">
         </form>
     </div>
+
+    <a href="https://www.google.com" id="search"></a>
+
+    <script>
+        document.getElementById('login_page').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var formDataLogin = {
+                email: document.getElementById('email_login').value,
+                password: document.getElementById('password_login').value
+            };
+        
+            fetch('http://localhost:8080/api/v1/auth/authenticate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formDataLogin)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Credenciais inválidas');
+                }
+            })
+            .then(data => {
+                alert("Login bem-sucedido! Token: " + data.token);
+                document.getElementById('search').click();
+            })
+            .catch(error => {
+                console.error('Erro:', error.message);
+                alert('Erro: ' + error.message);
+            });
+        });
+        </script>
+
 </body>
 </html>

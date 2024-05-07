@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181818;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 305px;
+    height: 417px;
+    background-color: #262626;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.email_login {
+    background-color: #FCA573;
+    width: 265px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.password_login {
+    background-color: #FCA573;
+    width: 265px;
+    height: 45px;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.submit_login {
+    background-color: #ffffff;
+    width: 265px;
+    height: 45px;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.google {
+    background-color: #ffffff;
+    width: 265px;
+    height: 45px;
+    margin-bottom: -80px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+
+
+

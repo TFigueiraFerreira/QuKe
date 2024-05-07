@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181818;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 305px;
+    height: 417px;
+    background-color: #262626;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.fname {
+    
+    background-color: #FCA573;
+    width: 130px;
+    height: 35px;
+    margin-right: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.lname {
+    background-color: #FCA573;
+    width: 130px;
+    height: 35px;
+    margin-left: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.names_register {
+    flex-direction: row;
+}
+
+
+.email_register,
+.new_password_register,
+.repeat_password_register {
+    background-color: #FCA573;
+    width: 265px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.submit_register {
+    background-color: #ffffff;
+    width: 265px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+.google {
+    background-color: #ffffff;
+    width: 265px;
+    height: 35px;
+    margin-bottom: -70px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: hidden;
+}
+
+
+
+

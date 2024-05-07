@@ -33,14 +33,39 @@ body {
     
 }
 
+
+
 .feed {
+    justify-content: center;
+    align-items: center;
     position: fixed;
     background-color: #181818;
     border-right: 3px solid #262626;
     border-left: 3px solid #262626;
     width: 604px;
-    height: 100%;
     left: 50%;
-    transform: translate(-50%);
-    z-index: 1;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.post {
+    position: relative;
+    background-color: #262626;
+    border-radius: 5px;
+    width: 564px;
+    height: 468px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.create_post {
+    position: relative;
+    background-color: #8c9231;
+    border-radius: 5px;
+    width: 564px;
+    height: 139px;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    z-index: 2;
 }

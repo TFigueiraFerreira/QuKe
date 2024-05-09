@@ -29,8 +29,7 @@ body {
     height: 57px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%)
-    
+    transform: translate(-50%,-50%);
 }
 
 .feed {
@@ -60,6 +59,88 @@ body {
     width: 564px;
     height: 468px;
     top: 35%;
+    z-index: 2;
+}
+
+.post_votes {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 72px;
+    height: 24px;
+    z-index: 3;
+    bottom: 2%;
+    left: 2%;
+}
+
+.post_comments {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 72px;
+    height: 24px;
+    z-index: 3;
+    bottom: 2%;
+    left: 17%;
+}
+
+.post_share {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 72px;
+    height: 24px;
+    z-index: 3;
+    bottom: 2%;
+    left: 32%;
+}
+
+.post_submit {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    width: 24px;
+    height: 24px;
+    z-index: 3;
+    bottom: 2%;
+    right: 2%;
+}
+
+.post_photo1 {
+    position: absolute;
+    border: 0.1px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    width: 281px;
+    height: 292px;
+    z-index: 3;
+    bottom: 15%;
+    left: 0%;
+}
+
+.post_photo2 {
+    position: absolute;
+    border: 0.1px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    width: 281px;
+    height: 292px;
+    z-index: 3;
+    bottom: 15%;
+    right: 0%;
+}
+
+.post_pic {
+    position: absolute;
+    border: 1px solid #181818;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 90%;
+    left: 2%;
 }
 
 .create_post {
@@ -69,4 +150,86 @@ body {
     height: 139px;
     z-index: 2;
     top: 15%;
+}
+
+.create_post_img {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 5%;
+}
+
+.create_post_gif {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 15%;
+}
+
+.create_post_emoji {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 25%;
+}
+
+.create_post_submit {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 20px;
+    width: 84px;
+    height: 26px;
+    z-index: 3;
+    bottom: 8%;
+    right: 2%;
+}
+
+.create_post_typebar {
+    position: absolute;
+    border: 0.1px solid grey;
+    background-color: #181818;
+    border-radius: 20px;
+    width: 494px;
+    height: 32px;
+    z-index: 3;
+    bottom: 68%;
+    right: 2%;
+}
+
+.create_post_pic {
+    position: absolute;
+    border: 1px solid #181818;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 68%;
+    left: 2%;
+}
+
+.ad_panel {
+    background-color: #262626;
+    border-radius: 5px;
+    width: 251px;
+    height: 473px;
+    position: fixed;
+    top: 16%;
+    right: 19%;
 }

@@ -18,6 +18,7 @@
                 <div class="post_photo2" id="post_photo2"></div>
                 <div class="post_pic" id="post_pic"></div>
             </div>
+            </div>
         <div class="create_post" id="create_post">
             <div class="create_post_img" id="create_post_img"></div>
             <div class="create_post_gif" id="create_post_gif"></div>
@@ -26,7 +27,104 @@
             <div class="create_post_typebar" id="create_post_typebar"></div>
             <div class="create_post_pic" id="create_post_pic"></div>
         </div>
-    </div>
     <div class="ad_panel" id="ad_panel"></div>
+
+    
+<script>
+const container = document.getElementById('feed');
+
+function createPostElement() {
+  const post = document.createElement('div');
+  post.classList.add('post');
+
+  const postVotes = document.createElement('div');
+  postVotes.classList.add('post_votes');
+  post.appendChild(postVotes);
+
+  const postComments = document.createElement('div');
+  postComments.classList.add('post_comments');
+  post.appendChild(postComments);
+
+  const postShare = document.createElement('div');
+  postShare.classList.add('post_share');
+  post.appendChild(postShare);
+
+  const postSubmit = document.createElement('div');
+  postSubmit.classList.add('post_submit');
+  post.appendChild(postSubmit);
+
+  const postPhoto1 = document.createElement('div');
+  postPhoto1.classList.add('post_photo1');
+  post.appendChild(postPhoto1);
+
+  const postPhoto2 = document.createElement('div');
+  postPhoto2.classList.add('post_photo2');
+  post.appendChild(postPhoto2);
+
+  const postPic = document.createElement('div');
+  postPic.classList.add('post_pic');
+  post.appendChild(postPic);
+
+  return post;
+}
+
+let isLoading = false;
+
+function addInitialPosts() {
+  if (!isLoading) {
+    isLoading = true;
+    for (let i = 0; i < 3; i++) {
+      const post = createPostElement();
+      container.appendChild(post);
+    }
+    isLoading = false;
+  }
+}
+
+function newPost() {
+  if (!isLoading) {
+    isLoading = true;
+    const post = createPostElement();
+    container.appendChild(post);
+    isLoading = false;
+  }
+}
+
+let previousScrollPosition = 0;
+const scrollThreshold = 100;
+let debounceTimeout;
+
+window.addEventListener('load', () => {
+  addInitialPosts();
+});
+
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.pageYOffset;
+  const scrolledPastThreshold = currentScrollPosition - previousScrollPosition > scrollThreshold;
+  const isAtBottom = window.innerHeight + currentScrollPosition >= document.body.offsetHeight;
+
+  if (scrolledPastThreshold && !isAtBottom && !isLoading) {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      newPost();
+    }, 500); // Adjust the delay as needed (in milliseconds)
+  }
+
+  if (isAtBottom) {
+    // Scroll to the bottom of the page
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  previousScrollPosition = currentScrollPosition;
+});
+
+setInterval(() => {
+  if (!isLoading && container.scrollHeight - container.clientHeight - container.scrollTop < 100) {
+    newPost();
+  }
+}, 1000); // Adjust the interval as needed (in milliseconds)
+
+</script>
+
 </body>
 </html>

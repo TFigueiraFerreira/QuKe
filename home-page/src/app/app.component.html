@@ -103,26 +103,15 @@ window.addEventListener('scroll', () => {
   const scrolledPastThreshold = currentScrollPosition - previousScrollPosition > scrollThreshold;
   const isAtBottom = window.innerHeight + currentScrollPosition >= document.body.offsetHeight;
 
-  if (scrolledPastThreshold && !isAtBottom && !isLoading) {
+  if (isAtBottom && !isLoading) {
     clearTimeout(debounceTimeout);
     debounceTimeout = setTimeout(() => {
       newPost();
     }, 500); // Adjust the delay as needed (in milliseconds)
   }
 
-  if (isAtBottom) {
-    // Scroll to the bottom of the page
-    window.scrollTo(0, document.body.scrollHeight);
-  }
-
   previousScrollPosition = currentScrollPosition;
 });
-
-setInterval(() => {
-  if (!isLoading && container.scrollHeight - container.clientHeight - container.scrollTop < 100) {
-    newPost();
-  }
-}, 1000); // Adjust the interval as needed (in milliseconds)
 
 </script>
 

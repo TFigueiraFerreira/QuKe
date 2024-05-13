@@ -276,11 +276,12 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: #FCA573;
+    background-color: #ffffff;
+    border: 2px solid #181818;
     border-radius: 20px;
     width: 72px;
     height: 24px;
-    left: 65%;
+    left: 62%;
 }
 
 .follower1_follow {
@@ -300,6 +301,42 @@ body {
 }
 
 .follower5_follow {
+    top: 77%;
+}
+
+.follower1_pic,
+.follower2_pic,
+.follower3_pic,
+.follower4_pic,
+.follower5_pic {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #181818;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    left: 9%;
+}
+
+.follower1_pic {
+    top: 17%;
+}
+
+.follower2_pic {
+    top: 32%;
+}
+
+.follower3_pic {
+    top: 47%;
+}
+
+.follower4_pic {
+    top: 62%;
+}
+
+.follower5_pic {
     top: 77%;
 }
 

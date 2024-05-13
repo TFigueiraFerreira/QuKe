@@ -268,54 +268,10 @@ body {
     left: 67.5%;
 }
 
-.follower1_follow {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #FCA573;
-    border-radius: 20px;
-    width: 72px;
-    height: 24px;
-    left: 65%;
-    top: 17%;
-}
-
-.follower2_follow {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #FCA573;
-    border-radius: 20px;
-    width: 72px;
-    height: 24px;
-    left: 65%;
-    top: 32%;
-}
-
-.follower3_follow {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #FCA573;
-    border-radius: 20px;
-    width: 72px;
-    height: 24px;
-    left: 65%;
-    top: 47%;
-}
-
-.follower4_follow {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #FCA573;
-    border-radius: 20px;
-    width: 72px;
-    height: 24px;
-    left: 65%;
-    top: 62%;
-}
-
+.follower1_follow,
+.follower2_follow,
+.follower3_follow,
+.follower4_follow,
 .follower5_follow {
     display: flex;
     flex-direction: column;
@@ -325,6 +281,25 @@ body {
     width: 72px;
     height: 24px;
     left: 65%;
+}
+
+.follower1_follow {
+    top: 17%;
+}
+
+.follower2_follow {
+    top: 32%;
+}
+
+.follower3_follow {
+    top: 47%;
+}
+
+.follower4_follow {
+    top: 62%;
+}
+
+.follower5_follow {
     top: 77%;
 }
 

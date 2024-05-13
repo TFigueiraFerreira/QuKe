@@ -63,11 +63,6 @@ body {
     align-items: center;
 }
 
-.create_post {
-    height: 139px;
-    top: 15%;
-}
-
 .post_votes,
 .post_comments,
 .post_share,
@@ -164,13 +159,16 @@ body {
 
 
 .create_post {
-    position: inherit;
+    position: relative;
     background-color: #262626;
     border-radius: 5px;
     width: 564px;
     height: 139px;
     margin-bottom: 20px;
-    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+    order: -1;
 }
 
 

@@ -410,4 +410,104 @@ body {
     z-index: 1;
 }
 
+.trending_page {
+    background-color: #262626;
+    border-radius: 5px;
+    width: 200px;
+    height: 420px;
+    position: sticky;
+    bottom: 40.5%;
+    left: 21.8%;
+}
 
+.trending_panel_title {
+    position: relative;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(26, 24, 24);
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 12px;
+}
+
+.trending_themes {
+    position: relative;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(26, 24, 24);
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 12px;
+}
+
+.theme1,
+.theme2,
+.theme3,
+.theme4,
+.theme5 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #181818;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    left: 9%;
+}
+
+.theme1 {
+    top: 17%;
+}
+
+.theme2 {
+    top: 32%;
+}
+
+.theme3 {
+    top: 47%;
+}
+
+.theme4 {
+    top: 62%;
+}
+
+.theme5 {
+    top: 77%;
+}
+
+.theme1_name,
+.theme2_name,
+.theme3_name,
+.theme4_name,
+.theme5_name {
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 28%;
+}
+
+.theme1_name {
+    top: 18.5%;
+}
+
+.theme2_name {
+    top: 33.5%;
+}
+
+.theme3_name {
+    top: 48.5%;
+}
+
+.theme4_name {
+    top: 63.5%;
+}
+
+.theme5_name {
+    top: 78.5%;
+}

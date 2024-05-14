@@ -258,7 +258,7 @@ body {
 }
 
 
-.recomended_panel {
+.recommended_panel {
     background-color: #262626;
     border-radius: 5px;
     width: 251px;
@@ -266,6 +266,61 @@ body {
     position: sticky;
     bottom: 49%;
     left: 67.5%;
+}
+
+.recommended_panel_title {
+    position: relative;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(26, 24, 24);
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 12px;
+}
+
+.recommended_panel_footer {
+    position: relative;
+    color: #ffffff;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 285px;
+}
+
+.follower1_name,
+.follower2_name,
+.follower3_name,
+.follower4_name,
+.follower5_name {
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 24%;
+}
+
+.follower1_name{
+    top: 18.5%;
+}
+
+.follower2_name{
+    top: 33.5%;
+}
+
+.follower3_name{
+    top: 48.5%;
+}
+
+.follower4_name{
+    top: 63.5%;
+}
+
+.follower5_name{
+    top: 78.5%;
 }
 
 .follower1_follow,
@@ -354,3 +409,5 @@ body {
     height: 100%;
     z-index: 1;
 }
+
+

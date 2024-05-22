@@ -181,6 +181,114 @@ body {
     z-index: 2;
 }
 
+.create_post_img.remove,
+.create_post_gif.remove,
+.create_post_emoji.remove,
+.create_post_submit.remove,
+.create_post_typebar.remove,
+.typebar_text.remove,
+.create_post_pic.remove,
+.create_post.remove {
+    width: 0;
+    height: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    order: 0;
+}
+
+.expand_create_post {
+    position: relative;
+    background-color: #262626;
+    border-radius: 5px;
+    width: 564px;
+    height: 468px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.expand_create_post.visible {
+    visibility: visible;
+    margin-bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+    order: -1;
+}
+
+.expand_create_post_img {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 5%;
+}
+
+.expand_create_post_gif {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 15%;
+}
+
+.expand_create_post_emoji {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 8%;
+    left: 25%;
+}
+
+.expand_create_post_submit {
+    position: absolute;
+    border: 2px solid #181818;
+    background-color: #FCA573;
+    border-radius: 20px;
+    width: 84px;
+    height: 26px;
+    z-index: 3;
+    bottom: 8%;
+    right: 2%;
+}
+
+
+
+.expand_typebar_text {
+    position: absolute;
+    border: 0.1px solid grey;
+    background-color: #181818;
+    border-radius: 20px;
+    width: 494px;
+    height: 32px;
+    z-index: 1;
+    margin-top: 12px;
+    left: 54px;
+    color: #ffffff;
+}
+
+.expand_create_post_pic {
+    position: absolute;
+    border: 1px solid #181818;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    bottom: 68%;
+    left: 2%;
+}
 
 .create_post_img {
     position: absolute;

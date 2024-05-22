@@ -25,9 +25,19 @@
             <div class="create_post_emoji" id="create_post_emoji"></div>
             <div class="create_post_submit" id="create_post_submit"></div>
             <div class="create_post_typebar" id="create_post_typebar">
-              <input class="typebar_text" type="text" id="typebar_text" name="typebar_text"> 
+              <input class="typebar_text" type="button" id="typebar_text" name="typebar_text"> 
             </div>
             <div class="create_post_pic" id="create_post_pic"></div>
+        </div>
+        <div class="expand_create_post" id="expand_create_post">
+            <div class="expand_create_post_img" id="expand_create_post_img"></div>
+            <div class="expand_create_post_gif" id="expand_create_post_gif"></div>
+            <div class="expand_create_post_emoji" id="expand_create_post_emoji"></div>
+            <div class="expand_create_post_submit" id="expand_create_post_submit"></div>
+            <div class="expand_create_post_typebar" id="expand_create_post_typebar">
+              <input class="expand_typebar_text" type="text" id="expand_typebar_text" name="expand_typebar_text"> 
+            </div>
+            <div class="expand_create_post_pic" id="expand_create_post_pic"></div>
         </div>
     <div class="recommended_panel" id="recommended_panel">
       <div class="recommended_panel_title" id="recommended_panel_title"><b>Recommended Pages</b></div>
@@ -162,6 +172,20 @@ window.addEventListener('scroll', () => {
   }
 
   previousScrollPosition = currentScrollPosition;
+});
+
+
+
+document.getElementById('typebar_text').addEventListener('click', () => {
+            document.getElementById('expand_create_post').classList.toggle('visible');
+            document.getElementById('create_post').classList.toggle('remove');
+            document.getElementById('create_post_img').classList.toggle('remove');
+            document.getElementById('create_post_gif').classList.toggle('remove');
+            document.getElementById('create_post_emoji').classList.toggle('remove');
+            document.getElementById('create_post_submit').classList.toggle('remove');
+            document.getElementById('create_post_typebar').classList.toggle('remove');
+            document.getElementById('typebar_text').classList.toggle('remove');
+            document.getElementById('create_post_pic').classList.toggle('remove');
 });
 
 </script>
